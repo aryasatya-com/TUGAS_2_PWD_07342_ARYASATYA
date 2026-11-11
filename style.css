@@ -1,0 +1,146 @@
+/* TUGAS 2: Redesign visual dengan CSS + responsive */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f6f9;
+  color: #333333;
+}
+
+/* ===== HEADER ===== */
+header {
+  background-color: #1e3a8a;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+header h1 {
+  font-size: 32px;
+}
+
+/* ===== NAVIGASI (flexbox) ===== */
+nav {
+  background-color: #1e40af;
+  position: sticky;
+  top: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+}
+
+nav a:hover {
+  background-color: #3b82f6;
+}
+
+/* ===== KONTEN ===== */
+main {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+section {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #1e3a8a;
+  border-bottom: 2px solid #3b82f6;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+h3 {
+  margin: 10px 0 5px 0;
+}
+
+ul, ol {
+  margin-left: 25px;
+}
+
+/* ===== TABEL ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+caption {
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+th, td {
+  border: 1px solid #cccccc;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #dbeafe;
+}
+
+/* ===== KOTAK SKILL (flexbox) ===== */
+.kotak-skill {
+  display: flex;
+  gap: 15px;
+}
+
+.kartu {
+  flex: 1;
+  background-color: #eff6ff;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 5px solid #3b82f6;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #1e3a8a;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* ===== RESPONSIVE (tampilan HP) ===== */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 24px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .kotak-skill {
+    flex-direction: column;
+  }
+
+  th, td {
+    font-size: 14px;
+    padding: 5px;
+  }
+}
